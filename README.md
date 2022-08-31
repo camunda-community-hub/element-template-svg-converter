@@ -109,13 +109,14 @@ If you want to create your own icons you can use these converters to do so. Bear
 
 It uses a static main method. The six arguments to pass into the main class are:
 
-"SVG input file location" "Modeler Element Template file location" "Icon width in pixels" "Element Template ID" "Element Template Name/Description/etc" "What BPMN elements it will apply to"
+```"SVG input file location" "Modeler Element Template file location" "Icon width in pixels" "Element Template ID" "Element Template Name/Description/etc" "What BPMN elements it will apply to"```
 
 If you have a directory of SVG icons to convert you can use the **BulkConverter** class which can be found here:
 
 ```src/main/java/org/svg/utilities/BulkConverter```
 
 It also uses a static main method. The six arguments to pass into the main class are:
-"SVG input directory" "Directory of converted SVG snippets" "Modeler Element Template file location" "Icon width in pixels" "Element Template ID" "Element Template Name/Description/etc" "What BPMN elements it will apply to" "Converted snippet directory" "Converted SVG directory"
+
+```"SVG input directory" "Directory of converted SVG snippets" "Modeler Element Template file location" "Icon width in pixels" "Element Template ID" "Element Template Name/Description/etc" "What BPMN elements it will apply to" "Converted snippet directory" "Converted SVG directory"```
 
 The converted snippet and SVG directories are only used if you plan to add to this repository as it makes updating the readme easier. Feel free to use throwaway directories. The Bulk Converter will be refactored for more streamlined functioning in later releases.

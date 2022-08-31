@@ -1,0 +1,1 @@
+data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='32.712677' viewBox='0 0 18 32.712677' %3E%3Cpolygon points='16.157745,0.0 0.0,19.115492 7.8,19.115492 1.8507042,32.771828 18.0,13.385915 10.292958,13.385915 '/%3E%3C/svg%3E

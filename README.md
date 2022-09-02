@@ -67,8 +67,8 @@ You can simply copy and paste these ready made snippets into the ```"icon": { "c
 <tr><td><a href="./converted-svg-snippets/questionMark.txt"><img src="./svgs/question-mark.svg"></a></td><td><a href="./converted-svg-snippets/blueQuestionMark.txt"><img src="./svgs/question-mark-blue.svg"></a></td></tr>
 </table>
 
-#Fun with flags
-Check out the available flag icons [here](./fun-with-flags/README.md). Note, they are still being converted. If you see a header struck through it means the icon either partially works or not at all. We are working to get all of the flags converted and if you have one you'd like to see let us know by creating an issue and we'll make it a priority. You can find the original source for the flag SVGs here: [https://flagicons.lipis.dev/](https://flagicons.lipis.dev/)
+<h2>Fun with flags</h2>
+<p>Check out the available flag icons [here](./fun-with-flags/README.md). Note, they are still being converted. If you see a header struck through it means the icon either partially works or not at all. We are working to get all of the flags converted and if you have one you'd like to see let us know by creating an issue and we'll make it a priority. You can find the original source for the flag SVGs here: [https://flagicons.lipis.dev/](https://flagicons.lipis.dev/)
 
 <h2> The rest </h2>
 

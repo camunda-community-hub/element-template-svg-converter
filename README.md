@@ -68,7 +68,7 @@ You can simply copy and paste these ready made snippets into the ```"icon": { "c
 </table>
 
 <h2>Fun with flags</h2>
-<p>Check out the available flag icons [here](./fun-with-flags/README.md). Note, they are still being converted. If you see a header struck through it means the icon either partially works or not at all. We are working to get all of the flags converted and if you have one you'd like to see let us know by creating an issue and we'll make it a priority. You can find the original source for the flag SVGs here: [https://flagicons.lipis.dev/](https://flagicons.lipis.dev/)
+<p>Check out the available flag icons <a href="./fun-with-flags/README.md">here</a>. Note, they are still being converted. If you see a header struck through it means the icon either partially works or not at all. We are working to get all of the flags converted and if you have one you'd like to see let us know by creating an issue and we'll make it a priority. You can find the original source for the flag SVGs here: <a href="https://flagicons.lipis.dev/">https://flagicons.lipis.dev/</a>
 
 <h2> The rest </h2>
 

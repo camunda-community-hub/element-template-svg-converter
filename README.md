@@ -4,7 +4,7 @@
 
 # Element Template SVG converter
 
-With Camunda 8 you are now able to attach custom icons to items in Element Templates. SVGs (Scalable Vector Graphics) are ideal since they are vector, rather than raster, diagrams meaning they can scale infinitely in size while retaining its original fidelity. This utility will convert SVG diagrams for use as 18px by 18px task icons. A growing library of converted icons is available (see below) for you to copy and paste into an Element Template file. Or you can use this sample [Element Template file](./element-template-sample/elementTemplates.json) to access all of the icons at once. Note, the elements have been associated with User Tasks and can be changed as needed.
+With Camunda 8 you are now able to attach custom icons to items in Element Templates. SVGs (Scalable Vector Graphics) are ideal since they are vector, rather than raster, diagrams meaning they can scale infinitely in size while retaining their original fidelity. This utility will convert SVG diagrams for use as 18px by 18px task icons. A growing library of converted icons is available (see below) for you to copy and paste into an Element Template file. Or you can use this sample [Element Template file](./element-template-sample/elementTemplates.json) to access all of the icons at once. Note, the elements have been associated with User Tasks and can be changed as needed.
 
 
 # Converted SVGs

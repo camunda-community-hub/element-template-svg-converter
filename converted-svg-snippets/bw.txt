@@ -1,0 +1,1 @@
+data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18.0' viewBox='0 0 18 18.0' %3E  %3Cg fill-rule='evenodd'%3E    %3Cpath fill='%2300cbff' d='M 0.0 0.0 h 18.0 v 18.0 H 0.0 z'/%3E    %3Cpath fill='%23fff' d='M 0.0 6.75 h 18.0 v 4.5 H 0.0 z'/%3E    %3Cpath d='M 0.0 7.477734 h 18.0 V 10.511719 H 0.0 z'/%3E  %3C/g%3E%3C/svg%3E

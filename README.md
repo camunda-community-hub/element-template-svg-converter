@@ -6,8 +6,13 @@
 
 With Camunda 8 you are now able to attach custom icons to items in Element Templates. SVGs (Scalable Vector Graphics) are ideal since they are vector, rather than raster, diagrams meaning they can scale infinitely in size while retaining their original fidelity. This utility will convert SVG diagrams for use as 18px by 18px task icons. A growing library of converted icons is available (see below) for you to copy and paste into an Element Template file. Or you can use this sample [Element Template file](./element-template-sample/elementTemplates.json) to access all of the icons at once. Note, the elements have been associated with User Tasks and can be changed as needed.
 
+# Table of Contents
+1. [Converted SVGs](#convertedSVGs)
+2. [Fun with flags](#funWithFlags)
+3. [The SVG converter utilities](#svgConverter)
+4. [Using Inkscape](#usingInkscape)
 
-# Converted SVGs
+## Converted SVGs <a name="convertedSVGs"></a>
 You can simply copy and paste these ready made snippets into the ```"icon": { "contents":``` portion of your Element Template entry. They have been created at a width of 18px. Click on image to be brought to the Element Template SVG snippet. Note, with the introduction of Modeler 5.2 the 18px by 18px icon dimensions are strictly enforced which will result in shrunken icons in some cases.
 
 
@@ -67,9 +72,6 @@ You can simply copy and paste these ready made snippets into the ```"icon": { "c
 <tr><td><a href="./converted-svg-snippets/questionMark.txt"><img src="./svgs/question-mark.svg"></a></td><td><a href="./converted-svg-snippets/blueQuestionMark.txt"><img src="./svgs/question-mark-blue.svg"></a></td></tr>
 </table>
 
-<h2>Fun with flags</h2>
-<p>Check out the available flag icons <a href="./fun-with-flags/README.md">here</a>. Note, they are still being converted. If you see a header struck through it means the icon either partially works or not at all. We are working to get all of the flags converted and if you have one you'd like to see let us know by creating an issue and we'll make it a priority. You can find the original source for the flag SVGs here: <a href="https://flagicons.lipis.dev/">https://flagicons.lipis.dev/</a>
-
 <h2> The rest </h2>
 
 <table>
@@ -105,21 +107,78 @@ An example of its use in an Element Template entry (see contents):
 }
 ```
 
-# The SVG converter utilities
+## Fun with flags <a name="funWithFlags"></a>
+<p>Check out the available flag icons <a href="./fun-with-flags/README.md">here</a>. Note, they are still being converted. If you see a header struck through it means the icon either partially works or not at all. We are working to get all of the flags converted and if you have one you'd like to see let us know by creating an issue and we'll make it a priority. You can find the original source for the flag SVGs here: <a href="https://flagicons.lipis.dev/">https://flagicons.lipis.dev/</a>
+
+
+## The SVG converter utilities <a name="svgConverter"></a>
 If you want to create your own icons you can use these converters to do so. Bear in mind, the simpler the SVG, the better the chances of success. SVGs using arcane transforms may return odd results until the algorithms can handle them. Also keep in mind the end result will fit into an 18x18 box and an SVG that looks great at 500x500 may not look as great at 18x18 until you zoom in. If you want to convert a single SVG use the **RescaleImage** class which can be found here:
 
-```src/main/java/org/svg/utilities/RescaleImage```
+```
+src/main/java/org/svg/utilities/RescaleImage
+```
 
 It uses a static main method. The six arguments to pass into the main class are:
 
-```"SVG input file location" "Modeler Element Template file location" "Icon width in pixels" "Element Template ID" "Element Template Name/Description/etc" "What BPMN elements it will apply to"```
+```
+"SVG input file location" "Modeler Element Template file location" "Icon width in pixels" "Element Template ID" "Element Template Name/Description/etc" "What BPMN elements it will apply to"
+```
 
 If you have a directory of SVG icons to convert you can use the **BulkConverter** class which can be found here:
 
-```src/main/java/org/svg/utilities/BulkConverter```
+```
+src/main/java/org/svg/utilities/BulkConverter
+```
 
 It also uses a static main method. The six arguments to pass into the main class are:
 
-```"SVG input directory" "Directory of converted SVG snippets" "Modeler Element Template file location" "Icon width in pixels" "Element Template ID" "Element Template Name/Description/etc" "What BPMN elements it will apply to" "Converted snippet directory" "Converted SVG directory"```
+```
+"SVG input directory" "Directory of converted SVG snippets" "Modeler Element Template file location" "Icon width in pixels" "Element Template ID" "Element Template Name/Description/etc" "What BPMN elements it will apply to" "Converted snippet directory" "Converted SVG directory"
+```
 
 The converted snippet and SVG directories are only used if you plan to add to this repository as it makes updating the readme easier. Feel free to use throwaway directories. The Bulk Converter will be refactored for more streamlined functioning in later releases.
+
+## Using Inkscape <a name="usingInkscape"></a>
+If an icon is not available here or if the converter has a hard time with a desired SVG, Inkscape can be used to manually update the SVG.
+
+Inkscape is an open source vector graphics editor and it can be found [here](https://inkscape.org/). Download and install Inkscape. Don't worry, it's available on all platforms. Start Inkscape and open the target SVG using **File > Open**.
+
+Change the size of the document in the **Document Properties** panel by going to **File > Document Properties** or use **Ctrl-Shift-D** and set the **Width** and **Height** properties to 18x18px:
+
+<img src="./images/docProperties.png" width="369" height="347">
+
+Next, manually resize the entire image by first selecting everything using **Ctrl-A**. Select a corner (usually lower right) of the outermost object and while holding the **Ctrl key** (to lock aspect ratio), resize the image to fit inside the new 18x18px canvas (you may need to zoom in to make it easier). FYI this is an SVG of the flag of Bermuda.
+
+<img src="./images/resize.png" width="432" height="434">
+
+Save your results, ideally in another file to avoid overwriting the source - **File > Save As...**. Be sure to save as a **Plain SVG** as saving it as an Inkscape SVG adds superfluous metadata. You may still need to manually edit the SVG file in a text editor to remove extraneous information.
+
+Next, run the SVG through the 'light' URL encoder utility. While you can simply apply URL encoder on the SVG it will also encode whitespace which isn't required and will result in an unreadable SVG in the event you'd like to make updates. The updated SVG can be run through a 'light' URL encoding utility and it can be found here:
+
+```
+src/main/java/org/svg/utilities/LightEncodeAndAugmentSVG
+```
+
+Its sole argument is
+
+```
+location and name of updated SVG file
+```
+
+Copy and paste the encoded and augmented SVG (it will be sent to the console) into your Element Template file. Be sure to add it into the
+
+```
+"icon": "contents":
+```
+section of the Element Template entry, see:
+
+```
+{
+	"$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+	"name": "Feed the cat",
+	"icon": { "contents": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'...
+```
+
+Reset Modeler and it will be shown as part of the Element Template:
+
+<img src="./images/result.png" width="515" height="347">

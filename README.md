@@ -148,7 +148,9 @@ Change the size of the document in the **Document Properties** panel by going to
 
 <img src="./images/docProperties.png" width="369" height="347">
 
-Next, manually resize the entire image by first selecting everything using **Ctrl-A**. Select a corner (usually lower right) of the outermost object and while holding the **Ctrl key** (to lock aspect ratio), resize the image to fit inside the new 18x18px canvas (you may need to zoom in to make it easier). FYI this is an SVG of the flag of Bermuda.
+Next, manually resize the entire image by first selecting everything using **Ctrl-A**. Select a corner (usually lower right) of the outermost object and while holding the **Ctrl key** (to lock aspect ratio), resize the image to fit inside the new 18x18px canvas (you may need to zoom in to make it easier). Or simply enter an X of zero, Y of zero, lock aspect ratio and enter a width or height of 18 in the top panel (see image). FYI this is an SVG of the flag of Bermuda.
+
+<img src="./images/topPanel.png" width="728" height="43">
 
 <img src="./images/resize.png" width="432" height="434">
 

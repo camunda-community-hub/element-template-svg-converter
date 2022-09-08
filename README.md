@@ -148,7 +148,7 @@ Change the size of the document in the **Document Properties** panel by going to
 
 <img src="./images/docProperties.png" width="369" height="347">
 
-Next, manually resize the entire image by first selecting everything using **Ctrl-A**. Select a corner (usually lower right) of the outermost object and while holding the **Ctrl key** (to lock aspect ratio), resize the image to fit inside the new 18x18px canvas (you may need to zoom in to make it easier). Or simply enter an X of zero, Y of zero, lock aspect ratio and enter a width or height of 18 in the top panel (see image). FYI this is an SVG of the flag of Bermuda.
+Next, manually resize the entire image by one of two ways. First, however, select everything in the diagram using **Ctrl-A**. One method is to then simply enter an X of zero, Y of zero, lock aspect ratio and enter a width or height of 18 in the top panel (see image below). Another approach is to select a corner (usually lower right) of the outermost object and while holding the **Ctrl key** (to lock aspect ratio), resize the image to fit inside the new 18x18px canvas (you may need to zoom in to make it easier). FYI this is an SVG of the flag of Bermuda.
 
 <img src="./images/topPanel.png" width="728" height="43">
 
@@ -156,7 +156,7 @@ Next, manually resize the entire image by first selecting everything using **Ctr
 
 Save your results, ideally in another file to avoid overwriting the source - **File > Save As...**. Be sure to save as a **Plain SVG** as saving it as an Inkscape SVG adds superfluous metadata. You may still need to manually edit the SVG file in a text editor to remove extraneous information.
 
-Next, run the SVG through the 'light' URL encoder utility. While you can simply apply URL encoder on the SVG it will also encode whitespace which isn't required and will result in an unreadable SVG in the event you'd like to make updates. The updated SVG can be run through a 'light' URL encoding utility and it can be found here:
+Next, run the SVG through the 'light' URL encoder utility. While you can simply apply URL encoder on the SVG it will also encode whitespace which isn't required and will result in an unreadable SVG in the event you'd like to make manual updates. The updated SVG can be run through a 'light' URL encoding and augmentation (it adds ```data:image/svg+xml,``` to the beginning) utility which can be found here:
 
 ```
 src/main/java/org/svg/utilities/LightEncodeAndAugmentSVG
@@ -178,7 +178,7 @@ section of the Element Template entry, see:
 ```
 {
 	"$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
-	"name": "Feed the cat",
+	"name": "Bermuda",
 	"icon": { "contents": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'...
 ```
 

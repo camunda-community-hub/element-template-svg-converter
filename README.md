@@ -109,7 +109,7 @@ An example of its use in an Element Template entry (see contents):
 
 ## Fun with flags <a name="funWithFlags"></a>
 <img src="./svgs/un.svg" width="100px"><img src="./svgs/eu.svg" width="100px"><img src="./svgs/de.svg" width="100px"><img src="./svgs/sc.svg" width="100px"><img src="./svgs/us.svg" width="100px">
-<p>Check out the available flag icons <a href="./fun-with-flags/README.md">here</a>. Note, they are still being converted. If you see a header struck through it means the icon either partially works or not at all. We are working to get all of the flags converted and if you have one you'd like to see let us know by creating an issue and we'll make it a priority. You can find the original source for the flag SVGs here: <a href="https://flagicons.lipis.dev/">https://flagicons.lipis.dev/</a>
+<p>Check out the available flag icons of the world <a href="./fun-with-flags/README.md">here</a>. Copy and paste individual countries or try them all at once. You can find the original source for the flag SVGs here: <a href="https://flagicons.lipis.dev/">https://flagicons.lipis.dev/</a>
 
 
 ## The SVG converter utilities <a name="svgConverter"></a>
